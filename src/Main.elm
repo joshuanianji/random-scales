@@ -21,7 +21,7 @@ main =
 
 
 
--- MODEL AND SUPPORTING TYPES
+-- MODEL
 
 
 type alias Model =
@@ -119,7 +119,7 @@ update msg model =
 
         -- we return the new scale
         GeneratedScale scale ->
-            ( { model | scale = Just scale |> Debug.log "scale" }, Cmd.none )
+            ( { model | scale = Just scale }, Cmd.none )
 
 
 newScale : Cmd Msg
